@@ -40,8 +40,8 @@
 }
 
 .nav_items li {
-  font-weight: lighter;
-  font-size: 140%;
+  /*font-weight: lighter;*/
+  /*font-size: 140%;*/
   color: #999;
   padding-right: 30px;
   margin-bottom: 15px;
@@ -89,10 +89,14 @@
 .project_gallery {
   /*max-height: 50%;*/
   /*height: 250px;*/
+  overflow-x: auto;
+  background-color: #E6E6E6;
+  padding: 15px;
+  margin-right: 15px;
 }
 
 .mag_pic img {
-  height: 200px;
+  height: 120px;
 }
 
 /* ----------------- Summary ----------------- */

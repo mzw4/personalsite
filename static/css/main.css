@@ -191,6 +191,7 @@ table {
 
 .inline {
   display: inline-block;
+  padding: 5px;
 }
 
 .no_width {
@@ -341,6 +342,14 @@ figcaption {
 }
 
 /* ------------ Overrides ------------ */
+
+a {
+  color: #FFCC66;
+}
+a:hover {
+  color: #FFDB94;
+  text-decoration: none;
+}
 
 p {
   margin: 0 0 1em;
