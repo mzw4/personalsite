@@ -1,0 +1,16 @@
+[{
+  "title": "Film Rating Predictor - Machine Learning Project",
+  "description": "",
+  "other": "",
+  "gallery": []
+},
+{
+  "title": "Selfiebot - Microcontrollers Project",
+  "description": "<p>System that uses facial detection to track faces and take pictures of people. The camera on the robot pans and tilts using servos controlled from an ATmega1284 microcontroller. A laptop computer performs image processing and tracking, using OpenCV for facial detection, giving commands to the microcontroller via serial communication.</p>
+
+  <p>See detailed design and implementation documentation <a href='http://people.ece.cornell.edu/land/courses/ece4760/FinalProjects/f2014/mzw4_jq42/webpage/main.html'>webpage</a> for details.</p>
+    
+  <p>Featured on <a href='http://hackaday.com/tag/selfie-bot/'>Hackaday</a>, <a href='http://embedded-lab.com/blog/?p=9867'>Embedded Lab</a>, and <a href='http://www.electronics-lab.com/blog/?p=32101'>Electronics Lab</a>!</p>",
+  "other": "",
+  "gallery": []
+}]

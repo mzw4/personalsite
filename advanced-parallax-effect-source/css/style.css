@@ -1,0 +1,34 @@
+/* ============================================================
+  SECTIONS
+============================================================ */
+
+
+section.module.parallax-1 {
+  background-image: url("../img/demo/pattern1.png");
+}
+section.module.parallax-2 {
+  background-image: url("../img/demo/pattern2.png");
+}
+section.module.parallax-3 {
+  background-image: url("../img/demo/pattern3.png");
+}
+
+@media all and (min-width: 600px) {
+  section.module h2 {
+    font-size: 42px;
+  }
+  section.module p {
+    font-size: 20px;
+  }
+  section.module.parallax {
+    padding: 300px 0;
+  }
+  section.module.parallax h1 {
+    font-size: 96px;
+  }
+}
+@media all and (min-width: 960px) {
+  section.module.parallax h1 {
+    font-size: 160px;
+  }
+}

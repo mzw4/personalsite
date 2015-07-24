@@ -1,0 +1,12 @@
+
+        <div class="gallery_button_wrapper col-xs-1">
+          <div class="gallery_button left_button v_center" data-dir="left">
+            <i class="center_all fa fa-chevron-left fa"></i>
+          </div>
+        </div>
+
+        <div class="gallery_button_wrapper col-xs-1">
+          <div class="gallery_button right_button v_center" data-dir="right">
+            <i class="center_all fa fa-chevron-right fa"></i>
+          </div>
+        </div>

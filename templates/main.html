@@ -1,0 +1,158 @@
+<html>
+  
+  <head>
+    <title>Michael Wang</title>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/projects.css') }}">
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> !-->
+    <script src="{{ url_for('static', filename='js/jquery-2.1.4.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/photoswipe.min.js') }}"></script> 
+    <script src="{{ url_for('static', filename='js/magnific-popup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/handlebars-v2.0.0.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/skrollr.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.lettering.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.textillate.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    <script type="text/javascript">
+      var CONTENT_DIR = {{ content_root |tojson|safe }};
+    </script>
+  </head>
+
+  <body>
+      <div id="title_panel">
+        <div class="dark_cover"></div>
+        <div id="menu_background" class="banner fixed_bg"></div>
+
+        <div class="largetext center_text vertical_center animated fadeInUp">Michael Wang</div>
+        
+        <div id="title_content" class="vertical_center">
+          <div class="header center_text animated">Portfolio Website</div>
+          <div class="line no_width"></div>
+          <div class="center_text animated">mzw4@cornell.edu</div>
+          <div class="line no_width"></div>
+
+          <div id="menu_wrapper">
+            <nav id="menu" class="navbar main_navbar" role="navigation">
+              <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav"></ul>
+                  <ul class="nav navbar-nav">
+                    <li><a href="#summary">Summary</a></li>
+                    <li><a href="#statement">Statement</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#interests">Interests</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                  </ul>
+                </div><!-- /.navbar-collapse -->
+              </div><!-- /.container-fluid -->
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <div id="main_content_panel">
+        <div id="sections"></div>
+      </div>
+
+      <div class="center_text footer">
+        <p>
+          Email: mzw4@cornell.edu<br>
+        </p><br>
+        Copyright &copy; 2014
+      </div>
+  </body>
+
+</html>
+
+{% raw %}
+<script id="sections_template" type="text/x-handlebars-template">
+  {{#each sections}}
+    <div id={{section_id}} class="section_panel">
+
+      <div class="section_content">{{{content}}}</div>
+      <!--
+      <div class="banner_wrapper">
+        <div class="dark_cover"></div>
+        <div class="parallax banner" style="background-image:"{{img_src}}></div>
+        <div class="section_title v_center">{{title}}</div>
+      </div>!-->
+    </div>
+  {{/each}}
+</script>
+<script id="projects_content_template" type="text/x-handlebars-template">
+  <div class="project_section_wrapper">
+    <div class="project_panel_content row">
+      <div id="project_nav" class="col-xs-3">
+        <div class="project_title med_header">Projects</div>
+
+        <ul class="nav_items">
+        {{#each project_names}}
+          <li data-index={{@index}}>{{this}}</li>
+        {{/each}}
+        </ul>
+
+        <div id="project_nav_divider" class="v_line v_center"></div>
+      </div>
+
+      <div class="project_panel col-xs-9">
+        {{#each project_templates}}
+          <div id="{{@key}}_project" class="project_content_wrapper hide_display">
+            {{{this}}}
+          </div>
+        {{/each}}
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="gallery_index col-sm-12">
+        <div class="">
+          {{#each project_templates}}
+            <i class="gallery_index_button fa fa-circle-thin" data-index={{@index}}></i>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+</script>
+
+<script id="project_template" type="text/x-handlebars-template">
+  <div class="project">
+    <div class="title">{{title}}</div>
+    <div class="description">{{description}}</div>
+    <div class="other">{{other}}</div>
+    <div class="gallery">{{pics}}</div>
+  </div>
+</script>
+
+<script id="circle_template" type="text/x-handlebars-template">
+  <i class="fa fa-circle" data-index={{project}}>
+</script>
+
+<script id="circle_thin_template" type="text/x-handlebars-template">
+  <i class="fa fa-circle-thin" data-index={{project}}>
+</script>
+
+{% endraw %}
+
+
+

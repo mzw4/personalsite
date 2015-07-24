@@ -1,0 +1,64 @@
+<div class="project_title med_header">Film Rating Predictor - Machine Learning</div>
+<div class="info_text">Pol Rosello, Jinjing Liang, Neil Parker, Michael Wang | Fall 2014</div>
+<div class="line_left"></div>
+<div class="project_content">
+  <div class="project_description">
+    <p>We predict IMDB film ratings using a number of regression models, including Ordinary Least Squares, Lasso Regression, Ridge Regression, Logistic Regression, and Support Vector Regression. We also explore kernels and several feature selection techniques such as recursive feature selection and a custom feature scoring method.</p>
+    <p>
+    We collected and cleaned data from three online movie databases. Movies features are comprised of attributes such as director, cast, budget, runtime, and genre.
+    </p>
+    <p>
+    Our results indicate that Ridge Regression using a polynomial kernel performed the best, with a mean average prediction error of 0.65 on IMDB's 1-10 scale. We were also able to discover which attributes were the most influential; interestingly, runtime was the attribute most positively correlated with ratings.
+    </p>
+
+    <p>*Web app coming soon</p>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-lite btn-lg" data-toggle="modal" data-target="#filmrater_report_modal">View Project Report</button>
+
+    <form class="inline" action="https://github.com/prosello/FilmRater" target="_blank">
+        <button type="submit" class="btn btn-lite btn-lg">
+          Github
+          <img id="github_logo" class="logo_tiny" src="{{ url_for('static', filename='content/github_logo_gray.svg') }}" alt="GitHub">
+        </button>
+    </form>
+
+    <figure class="center_text">
+      <a class="mag_pic inline" href="{{ url_for('static', filename='content/pictures/projects/filmrater/RMSE_diff_algs_v2.png') }}">
+        <img src="{{ url_for('static', filename='content/pictures/projects/filmrater/RMSE_diff_algs_v2.png') }}" alt='missing'/>
+      </a>
+      <a class="mag_pic inline" href="{{ url_for('static', filename='content/pictures/projects/filmrater/ridge_weights.png') }}">
+        <img src="{{ url_for('static', filename='content/pictures/projects/filmrater/ridge_weights.png') }}" alt='missing'/>
+      </a>
+    </figure>
+  </div>
+
+  <div class="project_other"></div>
+
+  <div class="project_gallery">
+
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="filmrater_report_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog pdf_modal">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="pdf_preview">
+          <div class="button_wrapper">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+
+          <object data="{{ url_for('static', filename='content/documents/filmrater_report.pdf') }}" type="application/pdf" class="pdf_viewer">
+           
+            <p>It appears you do not have a PDF plugin for this browser.
+            No biggie... you can <a href="{{ url_for('static', filename='content/documents/filmrater_report.pdf') }}">click here to
+            download the PDF file.</a></p>
+            
+          </object>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
