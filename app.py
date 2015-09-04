@@ -53,4 +53,5 @@ def get_section_templates():
   return jsonify(templates)
 
 if __name__ == "__main__":
-  app.run(debug=True)
+  app.run(debug=True, port=8080)
+

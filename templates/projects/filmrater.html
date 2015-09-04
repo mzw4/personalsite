@@ -4,15 +4,10 @@
 
 <div class="project_content">
   <div class="project_description">
-    <p>We predict IMDB film ratings using a number of regression models, including Ordinary Least Squares, Lasso Regression, Ridge Regression, Logistic Regression, and Support Vector Regression. We also explore kernels and several feature selection techniques such as recursive feature selection and a custom feature scoring method.</p>
+    <p>We predicted IMDB film ratings using movie features such as director, cast, budget, runtime, and genre. In particular we used a number of regression models, including Ordinary Least Squares, Lasso Regression, Ridge Regression, Logistic Regression, and Support Vector Regression. We also explored kernels and several feature selection techniques such as recursive feature selection and a custom feature scoring method.</p>
     <p>
-    We collected and cleaned data from three online movie databases. Movies features are comprised of attributes such as director, cast, budget, runtime, and genre.
+    Results indicated that Ridge Regression with a polynomial kernel performed the best, with a mean average prediction error of 0.65 on IMDB's 1-10 scale. We were also able to discover which attributes were the most influential; interestingly, runtime was the attribute most positively correlated with higher ratings.
     </p>
-    <p>
-    Our results indicate that Ridge Regression using a polynomial kernel performed the best, with a mean average prediction error of 0.65 on IMDB's 1-10 scale. We were also able to discover which attributes were the most influential; interestingly, runtime was the attribute most positively correlated with ratings.
-    </p>
-
-    <p>*Web app coming soon</p>
 
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-lite btn-lg" data-toggle="modal" data-target="#filmrater_report_modal">View Project Report</button>
@@ -28,10 +23,14 @@
 
       <figure class="">
         <a class="mag_pic inline" href="{{ url_for('static', filename='content/pictures/projects/filmrater/RMSE_diff_algs_v2.png') }}">
-          <img src="{{ url_for('static', filename='content/pictures/projects/filmrater/RMSE_diff_algs_v2.png') }}" alt='missing'/>
+          <div class="crop">
+            <img src="{{ url_for('static', filename='content/pictures/projects/filmrater/RMSE_diff_algs_v2.png') }}" alt='missing'/>
+          </div>
         </a>
         <a class="mag_pic inline" href="{{ url_for('static', filename='content/pictures/projects/filmrater/ridge_weights.png') }}">
-          <img src="{{ url_for('static', filename='content/pictures/projects/filmrater/ridge_weights.png') }}" alt='missing'/>
+          <div class="crop">
+            <img src="{{ url_for('static', filename='content/pictures/projects/filmrater/ridge_weights.png') }}" alt='missing'/>
+          </div>
         </a>
       </figure>
     </div>

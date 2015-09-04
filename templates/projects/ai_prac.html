@@ -1,48 +1,26 @@
-<div class="project_title med_header">Optimization of Asset Placement - Genetic Algorithm</div>
+<div class="project_title med_header">Optimizing Asset Placement - Genetic Algorithm</div>
+<div class="info_text">Pol Rosello, Neil Parker, Michael Wang | Fall 2013</div>
 <div class="line_left"></div>
 
 <div class="project_content">
   <div class="project_description">
-    <p>- Designed a system to optimize the defense of a colony in a virtual 2D world
-- Implemented a modified genetic algorithm to evolve a population of defensive units
-- Results were successful, in some cases showing an increase in survivability by up to 2500%, depending on the initial environment
-- Worked on a team of 3 developers
+    <p>We designed a system to optimize the defense of a colony in a virtual 2D world. The environment consisted of gatherers that collected food for their colony, enemies that spawned from fixed sources, guards that defended these gatherers against enemies, food sources, and walls. On simulation, gatherers moved between food sources and their colony, enemies chased and killed gatherers, and guards killed enemies that came within their fixed range circle. We created a GUI to run the simulation and algorithm, view results, and create custom maps.</p>
+    <p>
+    To optimize guard placement, we used a genetic algorithm that evaluated the fitness of a particular placement scheme and evolved successive generations by crossing the most successful placements in each generation. We defined fitness, crossing, and mutation functions. To encourage convergence, we incorporated simulated annealing to reduce the magnitude of mutation across generations.</p>
+    <p>
+    Results were successful, in some cases showing an increase in survivability by up to 2500%, depending on the initial environment.</p>
 
-This was an open-ended project for an Artificial Intelligence class. The premise of this project was to optimize the placement of defensive units in a virtual population, given a fixed tile-based map that spawned enemies. Specifically, the environment consisted of gatherers that collected food for their colony, guards that defended these gatherers against enemies, enemies that spawned from fixed sources, food sources, and walls. On simulation, gatherers moved between food sources and their “base”, enemies chased and killed gatherers, and guards killed enemies that came within their fixed range circle. We created a GUI to run the simulation and algorithm, view results, and create custom maps.
+    <button type="button" class="btn btn-lite btn-lg" data-toggle="modal" data-target="#ai_prac_report_modal">View Project Report</button>
 
-To optimize guard placement, we used a genetic algorithm that evaluated the fitness of a particular placement scheme and evolved successive generations by crossing the most successful placements in each generation. We customized the algorithm to fit this specific case by defining fitness, crossing, and mutation functions, and incorporating simulated annealing to reduce the magnitude of mutation across generations to speed up the convergence guard placement. 
-
-Our algorithm produced surprisingly successful results, showing a clear convergence towards the optimal guard placement for any given map, including hand made and randomly generated maps. For more details, see the project report below.
-
-Project Report:
-https://drive.google.com/file/d/0B6J1RIx1oLu4UHBTXy1fS3dEMlU/edit?usp=sharing
-
-Github:
-https://github.com/pr342/StrategyEvolution</p>
-
-    <p>See <a href="http://people.ece.cornell.edu/land/courses/ece4760/FinalProjects/f2014/mzw4_jq42/webpage/main.html">documentation</a> for more details.</p>
-    
-    <p>Featured on <a href="http://hackaday.com/tag/selfie-bot/">Hackaday</a>, <a href="http://embedded-lab.com/blog/?p=9867">Embedded Lab</a>, and <a href=" http://www.electronics-lab.com/blog/?p=32101">Electronics Lab</a>!</p>
+    <form class="inline" action="https://github.com/prosello/aiproject" target="_blank">
+        <button type="submit" class="btn btn-lite btn-lg">
+          Github
+          <img id="github_logo" class="logo_tiny" src="{{ url_for('static', filename='content/github_logo_gray.svg') }}" alt="GitHub">
+        </button>
+    </form>
   </div>
   <div class="project_other"></div>
   <div class="project_gallery">
 
-    <figure class="center_text">
-        <div class="inline">
-          <a class="mag_pic" href="{{ url_for('static', filename='content/pictures/2mid.jpg') }}">
-            <img src="{{ url_for('static', filename='content/pictures/2mid.jpg') }}" alt='missing' width='250px'/>
-          </a>
-        </div>
-        <div class="inline">
-          <a class="mag_pic" href="{{ url_for('static', filename='content/pictures/faces.png') }}">
-            <img src="{{ url_for('static', filename='content/pictures/faces.png') }}" alt='missing' width='300px'/>
-          </a>
-        </div>
-        <div class="inline">
-          <a class="mag_pic" href="{{ url_for('static', filename='content/pictures/gui.png') }}">
-            <img src="{{ url_for('static', filename='content/pictures/gui.png') }}" alt='missing' width='300px'/>
-          </a>
-        </div>
-    </figure>
   </div>
 </div>

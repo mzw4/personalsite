@@ -10,14 +10,14 @@
 
 .project_section_wrapper {
   padding: 30px 2% 30px 2%;
-  position: absolute;
+  position: absolute; 
   height: 100%;
   font-size: 18px;
   /*height: calc(100vh - 50px);*/
 }
 
 .project_panel_content {
-  font-weight: 300;
+  /*font-weight: 300;*/
   /*max-width: 1020px;*/
   margin: auto;
   height: calc(100% - 37px);
@@ -25,7 +25,6 @@
 }
 
 .project_title {
-  /*font-size: 200%;*/
   height: 50px;
   margin-bottom: 10px;
 }
@@ -40,8 +39,6 @@
 }
 
 .nav_items li {
-  /*font-weight: lighter;*/
-  /*font-size: 140%;*/
   color: #999;
   padding-right: 30px;
   margin-bottom: 15px;
@@ -87,16 +84,23 @@
 }
 
 .project_gallery {
-  /*max-height: 50%;*/
-  /*height: 250px;*/
   overflow-x: auto;
-  background-color: #E6E6E6;
+  background-color: #ECECEC;
   padding: 15px;
   margin-right: 15px;
 }
 
-.mag_pic img {
-  height: 120px;
+.crop {
+  width: 250px;
+  height: 150px;
+  overflow: hidden;
+}
+
+.crop img {
+  max-width: 400px;
+  position: relative;
+  /*left: ;*/
+  /*top: -50%;*/
 }
 
 /* ----------------- Summary ----------------- */
@@ -106,10 +110,11 @@
   /*background-color: #4A989B;*/
   /*background-color: #499B98;*/
   /*background-color: #3AA5A5;*/
-  background-color: #59ADAD;
+  /*background-color: #59ADAD;*/ /* good green */
   /*background-color: #333;*/
-  color: white;
-  font-family: "PT Sans";
+  background-color: #444;
+  color: #CCC;
+  /*font-family: "PT Sans";*/
 }
 
 .summary_section_wrapper {
@@ -122,7 +127,7 @@
 }
 
 .summary_text_wrapper {
-  padding-bottom: 1em;
+  padding: 60px 0;
 }
 
 #summary_pic {
@@ -136,7 +141,7 @@
 #summary_details {
   max-width: 800px;
   margin: auto;
-  padding: 0px 30px 30px 30px;
+  padding: 30px;
   font-size: 18px;
 }
 
@@ -144,10 +149,16 @@
   margin-top: 5px;
   padding: 0 15px;
   position: absolute;
+  color: white;
+}
+
+.quote_icon {
+  color: white;
 }
 
 .summary_header {
   display: inline-block;
+  color: white;
 }
 
 #summary_details li i {
@@ -215,8 +226,6 @@ a:hover {
 
 .text_content {
   font-size: 18px;
-  font-weight: 300;
-
   max-width: 800px;
   margin: auto;
   position: relative;
