@@ -112,6 +112,16 @@
   /*background-color: #3AA5A5;*/
   /*background-color: #59ADAD;*/ /* good green */
   /*background-color: #333;*/
+  background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.6), 
+      rgba(0, 0, 0, 0.6)
+    ),
+    url(/static/content/backgrounds/city-blurred.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   background-color: #444;
   color: #CCC;
   /*font-family: "PT Sans";*/
@@ -330,6 +340,12 @@ a:hover {
 
 /* ----------------- Resume ----------------- */
 
+#resume_wrapper {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
 #resume {
   background-color: #3AA5A5;
   /*background-color: #333;*/
@@ -349,13 +365,14 @@ a:hover {
 }
 
 #resume_button {
-  background-color: #3AA5A5;
-  /*background-color: #333;*/
+  background: none;
   border-color: white;
+  color: white;
 }
-#resume_button:hover {
-  background-color: white;
-  color: #333;
+
+#resume:hover {
+  color: orange;
+  border-color: orange;
 }
 
 .pdf_modal {
@@ -457,6 +474,37 @@ a:hover {
 
 .gallery_index_button:hover {
   cursor: pointer;
+}
+
+/* ----------------- Interests ----------------- */
+
+#interests {
+  background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.6), 
+      rgba(0, 0, 0, 0.6)
+    ),
+    url(/static/content/backgrounds/city-blurred.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #444;
+  color: #CCC;
+}
+
+.interests_section_wrapper {
+  padding: 30px 5% 30px 5%;
+  /*background-image: url('/static/content/backgrounds/stark.jpg');*/
+  background-attachment: fixed;
+  /*flex: 1;*/
+  /*display: flex;*/
+  flex-direction: column;
+}
+
+.interests_title {
+  height: 50px;
+  margin-bottom: 10px;
 }
 
 /* ------------------------------------------ */

@@ -3,12 +3,12 @@
 
     <div class="summary_text_wrapper row">
       <div class="col-sm-3">
-        <img id="summary_pic" src="/static/content/pictures/linkedin_pic.jpg">
+        <img id="summary_pic" src="/static/content/pictures/headshot.jpg">
       </div>
 
       <i class="quote_icon fa fa-quote-left fa-2x col-sm-1"></i>
       <div id="summary_text" class="col-sm-8 block_text">
-        Hi! I am a senior at Cornell University studying Computer Science with a minor in Electrical and Computer Engineering. I'm particularly interested in pursuing applications AI and machine learning in areas including health, sustainability, and automation. Building interesting and practical things is my passion, and I hope to make an impact in the entrepreneurial tech space in the near future.
+        Hi! I am currently a student at <div class="ctech_text">Cornell Tech NYC</div> studying Computer Science. I'm particularly interested in pursuing applications AI and machine learning in areas including health, sustainability, and automation. Building interesting and practical things is my passion, and I hope to make an impact in the entrepreneurial tech space in the near future.
       </div>
 
     </div>
@@ -29,6 +29,7 @@
           <li><i class="fa fa-angle-right fa"></i>UX design</li>
         </ul>
       </div>
+
       <div id="positions" class="col-sm-7">
         <div class="summary_header med_header">Positions held</div>
         <i class="title_icon fa fa-briefcase fa-3x"></i>
@@ -40,8 +41,34 @@
           <li><i class="fa fa-angle-right fa"></i>Software Eng Intern, <a target="_blank" href="https://www.amazon.com">Amazon.com Inc</a></li>
         </ul>
       </div>
-
     </div>
   </div>
 
+  <div id="resume_wrapper">
+    <!-- Button trigger modal -->
+    <button id="resume_button" type="button" class="btn btn-lite btn-lg" data-toggle="modal" data-target="#resume_modal">
+      View Resume
+    </button>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="resume_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog pdf_modal">
+    <div class="modal-content">
+      <div class="modal-body">
+          <div class="button_wrapper">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+
+          <object data="{{ url_for('static', filename='content/documents/michael_wang_resume.pdf') }}" type="application/pdf" class="pdf_viewer">
+           
+            <p>It appears you do not have a PDF plugin for this browser.
+            No biggie... you can <a href="{{ url_for('static', filename='content/documents/michael_wang_resume.pdf') }}">click here to
+            download the PDF file.</a></p>
+            
+          </object>
+        </div>
+    </div>
+  </div>
 </div>

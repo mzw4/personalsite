@@ -5,7 +5,7 @@ var banners_dir = 'banners/'
 var _projects = ['selfiebot', 'filmrater', 'okra', 'pathogenesis', 'ai_prac'];
 var cur_project_index = 0;
 
-var backgrounds = ['IMG_2776.JPG', 'IMG_3182.JPG', 'IMG_3816.JPG', 'IMG_2986.JPG'];
+var backgrounds = ['IMG_2776.JPG', 'waves.jpg', 'acacia.jpg', 'aquarium.jpg'];
 var cur_background_index = 0;
 var BACKGROUND_CHANGE_TIME = 10000;
 var MENU_FADE_TIME = 1000;
@@ -59,6 +59,7 @@ $(function() {
   // Set the background and timer to change it occasionally
   $menu_background.css({'background-image': 'url(' + CONTENT_DIR + backgrounds_dir + backgrounds[cur_background_index] + ')'});
   changeBackground();
+  console.log(CONTENT_DIR);
 
   // Fade in the content
   $title_content.delay(500).css({'visibility':'visible'}).hide().fadeIn(500, function() {
@@ -196,18 +197,6 @@ $(function() {
         img_src: CONTENT_DIR + banners_dir + 'mountains.jpg',
         content: '',
       },
-      {
-        section_id: 'contact',
-        title: 'Contact',
-        img_src: CONTENT_DIR + banners_dir + 'graph1.png',
-        content: '',
-      },
-      {
-        section_id: 'gallery',
-        title: 'Gallery',
-        img_src: '',
-        content: '',
-      }
     ];
 
     // Build content sections and set parameters
@@ -225,16 +214,16 @@ $(function() {
 
     // TEMP
     $statement_content = $('#statement .section_content');
-    $resume_content = $('#resume .section_content');
     $summary_content = $('#summary .section_content');
+    $interests_content = $('#interests .section_content');
 
-    var sections = ['statement_of_purpose', 'resume', 'summary']
+    var sections = ['statement_of_purpose', 'summary', 'interests']
     $.get('ajax_get_section_templates', payload = { sections: JSON.stringify(sections) })
       .done(function(section_templates) {
         // TEMP
         $statement_content.html(section_templates['statement_of_purpose']);
-        $resume_content.html(section_templates['resume']);
         $summary_content.html(section_templates['summary']);
+        $interests_content.html(section_templates['interests']);
       });
 
     // Load projects
